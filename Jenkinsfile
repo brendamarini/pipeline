@@ -8,19 +8,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "construindo.."
-                sh '''
+                echo "construindo..."
                 cd comandos
                 pip install -r requisitos.txt
-                '''
             }
         }
         stage('Test') {
             steps {
                 echo "Testing.."
-                sh '''
                 cd constuindo
-                olamundo.py
+                python3 olamundo.py
                 
             }
         }
