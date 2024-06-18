@@ -11,7 +11,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo "testando"
+                sh '''
                 cd comandos
+                '''
                 echo "teste completo"
             }
         }
