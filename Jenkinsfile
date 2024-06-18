@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Construindo..."
+                cd comandos
                 cat requisitos.txt
             }
         }
