@@ -13,6 +13,7 @@ pipeline {
                 echo "testando"
                 sh '''
                 cd comandos
+                cat requisito.txt
                 '''
                 echo "teste completo"
             }
