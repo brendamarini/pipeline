@@ -9,22 +9,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Construindo..."
-                cd comandos
-                cat requisitos.txt
+                sh 'pip install -r requisitos.txt' // Executa o comando shell para instalar as dependências
             }
         }
 
         stage('Test') {
             steps {
                 echo "Testando..."
-                python3 olamundo.py
+                sh 'python3 olamundo.py' // Executa o script Python (certifique-se de que o nome do script está correto)
             }
         }
 
         stage('Deliver') {
             steps {
                 echo 'Entregando....'
-            
+                // Adicione os comandos para a etapa de entrega aqui
             }
         }
     }
