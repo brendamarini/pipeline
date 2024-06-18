@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Construindo..."
-                sh 'pip install -r requisitos.txt' // Executa o comando shell para instalar as dependências
+                cat requisitos.txt' // Executa o comando shell para instalar as dependências
             }
         }
 
@@ -23,7 +23,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 echo 'Entregando....'
-                // Adicione os comandos para a etapa de entrega aqui
+            
             }
         }
     }
