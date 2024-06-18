@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Construindo..."
-                cat requisitos.txt' // Executa o comando shell para instalar as dependências
+                cat requisitos.txt
             }
         }
 
