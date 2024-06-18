@@ -16,7 +16,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo "testando"
-                
+                sh '''
+                cd comandos
+                ls
+                python3 olamundo.py                
                 echo "teste completo"
             }
         }
