@@ -14,7 +14,7 @@ pipeline {
                 sh '''
                 cd comandos
                 ls
-                cat requisito
+                pip install -r requisito
                 '''
                 echo "teste completo"
             }
