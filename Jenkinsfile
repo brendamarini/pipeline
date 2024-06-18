@@ -14,6 +14,7 @@ pipeline {
                 sh '''
                 cd comandos
                 ls
+                cat requisito
                 '''
                 echo "teste completo"
             }
