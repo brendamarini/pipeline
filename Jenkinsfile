@@ -16,7 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Testando..."
-                sh 'python3 olamundo.py' // Executa o script Python (certifique-se de que o nome do script está correto)
+                python3 olamundo.py
             }
         }
 
