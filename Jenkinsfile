@@ -5,17 +5,18 @@ pipeline {
         stage('Build') {
             steps {
                 echo "construindo....."
+                sh '''
+                cd comandos
+                ls
+                cat requisito
+                '''
                 echo "terminado"
             }
         }
         stage('Test') {
             steps {
                 echo "testando"
-                sh '''
-                cd comandos
-                ls
-                pip install -r requisito
-                '''
+                
                 echo "teste completo"
             }
         }
