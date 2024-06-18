@@ -10,8 +10,8 @@ pipeline {
             steps {
                 echo "construindo.."
                 sh '''
-                cd myapp
-                pip install -r requirements.txt
+                cd comandos
+                pip install -r requisitos.txt
                 '''
             }
         }
@@ -19,18 +19,15 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                cd myapp
-                python3 hello.py
-                python3 hello.py --name=Brad
-                '''
+                cd constuindo
+                olamundo.py
+                
             }
         }
         stage('Deliver') {
             steps {
-                echo 'Deliver....'
-                sh '''
-                echo "doing delivery stuff.."
-                '''
+                echo 'entregando....'
+                
             }
         }
     }
