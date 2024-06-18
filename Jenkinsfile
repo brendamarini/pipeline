@@ -1,29 +1,23 @@
 pipeline {
-    agent any
-
-    triggers {
-        pollSCM '* * * * *' // Verifica o repositório a cada minuto
-    }
+    agent any 
 
     stages {
         stage('Build') {
             steps {
-                echo "Construindo..."
-                sh 'pip install -r requisitos.txt' // Executa o comando shell para instalar as dependências
+                echo "construindo....."
+                echo "terminado"
             }
         }
-
         stage('Test') {
             steps {
-                echo "Testando..."
-                sh 'python3 olamundo.py' // Executa o script Python (certifique-se de que o nome do script está correto)
+                echo "testando"
+                echo "teste completo"
             }
         }
-
         stage('Deliver') {
             steps {
-                echo 'Entregando....'
-                // Adicione os comandos para a etapa de entrega aqui
+                echo "entregando"
+                echo "entrega completa"
             }
         }
     }
