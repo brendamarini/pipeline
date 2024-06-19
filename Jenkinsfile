@@ -19,7 +19,7 @@ pipeline {
                 sh '''
                 cd comandos
                 ls
-                python3 olamundo.py   
+                python olamundo.py   
                 '''
                 echo "teste completo"
             }
